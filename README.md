@@ -1,0 +1,145 @@
+# Bolt Data Analytics
+## Ride-Hailing Demand-Supply Optimization
+
+![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)
+![Pandas](https://img.shields.io/badge/Pandas-2.0+-green.svg)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-3.0+-orange.svg)
+![Status](https://img.shields.io/badge/Status-Complete-success.svg)
+
+## 📊 Project Overview
+
+Analysis of ride-hailing platform demand-supply dynamics to identify undersupplied periods and optimize driver allocation. This project examines 839 hours of operational data across 5 weeks to develop data-driven recommendations for improving service coverage.
+
+## 🎯 Key Findings
+
+- **123 undersupplied periods** identified below 85% coverage threshold
+- **397 additional driver hours** required to achieve target coverage (+15.9% increase)
+- **EUR 5.54/hour earnings guarantee** recommended with projected **3,455% ROI**
+- Early morning weekdays (4-7 AM) show critical undersupply (35-53% coverage)
+- Evening peaks (6-9 PM) demonstrate moderate undersupply (60-75% coverage)
+
+## 📁 Project Structure
+
+```
+Bolt-Data-Analytics/
+│
+├── Bolt_Analysis.ipynb              # Main analysis notebook
+├── Data/                             # Dataset folder
+│   ├── Demand Data - Hourly_OverviewSearch_1.csv
+│   └── Supply Data - Hourly_DriverActivity_1.csv
+│
+├── Demand_Supply_24h.png            # 24-hour demand-supply curve
+├── Coverage_Heatmap.png             # Weekly coverage heatmap
+├── Summary_Dashboard.png            # 4-panel summary dashboard
+└── README.md
+```
+
+## 🔍 Analysis Approach
+
+### Undersupplied Time Periods
+- **Methodology**: Analyzed hourly demand-supply data, defined undersupply as coverage <85%
+- **Visualizations**: 
+  - 24-hour demand-supply curve showing peak mismatches
+  - Weekly heatmap revealing critical undersupply patterns
+- **Key Insight**: Supply lags demand by 1 hour during evening peak
+
+### Required Capacity
+- **Calculation**: Gap-based formula with 1.5x buffer for utilization rates
+- **Priority Allocation**:
+  - Severe (<60% coverage): 95 hours
+  - Moderate (60-75%): 205 hours
+  - Mild (75-85%): 97 hours
+
+### Earnings Guarantee Strategy
+- **Current State**: 0.60 rides/hour, EUR 4.82/hour driver earnings
+- **Recommendation**: EUR 5.54/hour guarantee (15% increase)
+- **Economics**: EUR 287 program cost, EUR 10,214 expected revenue
+- **Assumptions**: 70% capture rate, 30% conversion rate for missed demand
+
+## 📈 Visualizations
+
+### 24-Hour Demand vs Supply Pattern
+![24-Hour Analysis](Demand_Supply_24h.png)
+
+### Weekly Coverage Heatmap
+![Weekly Heatmap](Coverage_Heatmap.png)
+
+### Summary Dashboard
+![Dashboard](Summary_Dashboard.png)
+
+## 🛠️ Technologies Used
+
+- **Python 3.13+**: Core programming language
+- **Pandas**: Data manipulation and aggregation
+- **NumPy**: Numerical computations
+- **Matplotlib**: Data visualization
+- **Seaborn**: Statistical visualizations
+
+## 📊 Dataset Details
+
+**Data Period**: November 14 - December 18, 2016 (5 weeks)
+
+**Demand Data** (839 hourly records):
+- People saw 0 cars (unique)
+- People saw +1 cars (unique)
+- Coverage Ratio (%)
+- Timestamp
+
+**Supply Data** (840 hourly records):
+- Active drivers
+- Online hours
+- Finished rides
+- Rides per online hour (RPH)
+- Timestamp
+
+## 🚀 Getting Started
+
+### Prerequisites
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+### Running the Analysis
+```bash
+jupyter notebook Bolt_Analysis.ipynb
+```
+
+## 💡 Key Insights
+
+1. **Demand Elasticity**: Coverage ratio correlates with finished rides (R² = 0.73). Below 70% coverage, demand destruction accelerates.
+
+2. **Supply Behavior**: Drivers avoid early morning despite demand due to perceived low earnings. Guarantee addresses this perception gap.
+
+3. **Competitive Dynamics**: First-mover advantage in earnings guarantee can capture driver loyalty before competitors.
+
+4. **Long-Term Strategy**: Guarantee acts as bridge. Drivers experiencing high demand during previously avoided hours often continue without guarantee (self-correcting within 8-12 weeks).
+
+## 📌 Business Recommendations
+
+### Immediate Actions
+1. Launch EUR 5.54/hour guarantee for 4-7 AM weekdays
+2. Implement real-time dashboard tracking coverage and costs
+3. Create driver communication campaign via app notifications
+
+### Success Metrics
+- Coverage >85% in 90% of guaranteed hours within 6 weeks
+- Subsidy payout <50% of gross revenue captured
+- Driver participation rate >40% during guaranteed hours
+- User complaints about "no cars" down by 60%
+
+## 🔗 Related Projects
+
+- [Uber Data Analytics](https://github.com/z12ob/Uber-Data-Analytics) - Similar demand-supply analysis for Uber dataset
+
+## 📄 License
+
+This project is open source and available for educational purposes.
+
+## 👤 Author
+
+**Guram Melikidze**
+- GitHub: [@z12ob](https://github.com/z12ob)
+
+---
+
+*Analysis demonstrates data-driven approach to ride-hailing operations optimization, combining statistical analysis with business strategy.*
