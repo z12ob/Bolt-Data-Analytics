@@ -13,8 +13,8 @@ Analysis of ride-hailing platform demand-supply dynamics to identify undersuppli
 ## 🎯 Key Findings
 
 - **123 undersupplied periods** identified below 85% coverage threshold
-- **397 additional driver hours** required to achieve target coverage (+15.9% increase)
-- **EUR 5.54/hour earnings guarantee** recommended with projected **3,455% ROI**
+- **~397 additional driver hours** required to achieve target coverage (+15.9% increase)
+- **Targeted earnings guarantee strategy** recommended during critical undersupply windows
 - Early morning weekdays (4-7 AM) show critical undersupply (35-53% coverage)
 - Evening peaks (6-9 PM) demonstrate moderate undersupply (60-75% coverage)
 
@@ -51,10 +51,10 @@ Bolt-Data-Analytics/
   - Mild (75-85%): 97 hours
 
 ### Earnings Guarantee Strategy
-- **Current State**: 0.60 rides/hour, EUR 4.82/hour driver earnings
-- **Recommendation**: EUR 5.54/hour guarantee (15% increase)
-- **Economics**: EUR 287 program cost, EUR 10,214 expected revenue
-- **Assumptions**: 70% capture rate, 30% conversion rate for missed demand
+- **Approach**: Targeted hourly guarantee aligned with peak undersupply windows
+- **Mechanism**: Incremental earnings incentive to align driver supply with demand
+- **Economics**: Minimal program cost vs. substantial captured demand revenue
+- **Assumptions**: Conservative demand capture and conversion estimates
 
 ## 📈 Visualizations
 
@@ -106,13 +106,13 @@ jupyter notebook Bolt_Analysis.ipynb
 
 ## 💡 Key Insights
 
-1. **Demand Elasticity**: Coverage ratio correlates with finished rides (R² = 0.73). Below 70% coverage, demand destruction accelerates.
+1. **Demand Elasticity**: Coverage ratio correlates with completed rides. Below 70% coverage, user demand destruction accelerates significantly.
 
-2. **Supply Behavior**: Drivers avoid early morning despite demand due to perceived low earnings. Guarantee addresses this perception gap.
+2. **Supply-Demand Mismatch**: Drivers avoid early morning periods despite user demand due to earnings incentive structure. Targeted guarantee addresses this operational gap.
 
-3. **Competitive Dynamics**: First-mover advantage in earnings guarantee can capture driver loyalty before competitors.
+3. **Economic Opportunity**: Substantial missed demand exists during undersupply periods, creating strong business case for supply optimization.
 
-4. **Long-Term Strategy**: Guarantee acts as bridge. Drivers experiencing high demand during previously avoided hours often continue without guarantee (self-correcting within 8-12 weeks).
+4. **Strategic Mechanism**: Guarantee acts as temporary supply catalyst. As drivers experience consistent demand during previously low periods, market equilibrium can self-sustain.
 
 ## 📌 Business Recommendations
 
