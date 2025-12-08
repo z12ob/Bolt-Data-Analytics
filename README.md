@@ -28,9 +28,10 @@ Bolt-Data-Analytics/
 │   ├── Demand Data - Hourly_OverviewSearch_1.csv
 │   └── Supply Data - Hourly_DriverActivity_1.csv
 │
-├── Demand_Supply_24h.png            # 24-hour demand-supply curve
-├── Coverage_Heatmap.png             # Weekly coverage heatmap
-├── Summary_Dashboard.png            # 4-panel summary dashboard
+├── Demand_Supply_24h.png             # 24-hour demand-supply visualization
+├── Coverage_Heatmap.png              # Weekly coverage heatmap
+├── Summary_Dashboard.png             # 4-panel summary dashboard
+├── requirements.txt                 # Python dependencies
 └── README.md
 ```
 
@@ -56,16 +57,28 @@ Bolt-Data-Analytics/
 - **Economics**: Minimal program cost vs. substantial captured demand revenue
 - **Assumptions**: Conservative demand capture and conversion estimates
 
-## 📈 Visualizations
+## 📈 Analysis Output
 
-### 24-Hour Demand vs Supply Pattern
-![24-Hour Analysis](Demand_Supply_24h.png)
+Visualizations are generated dynamically during notebook execution:
+
+### 24-Hour Demand vs Supply Curve
+Shows peak demand at 19:00 (evening) with supply peaking one hour later at 20:00. Red-shaded zones highlight undersupplied periods, with critical shortfalls during early morning hours (4-7 AM).
+
+![24-Hour Demand vs Supply](Demand_Supply_24h.png)
 
 ### Weekly Coverage Heatmap
-![Weekly Heatmap](Coverage_Heatmap.png)
+Reveals systematic undersupply (red zones) concentrated in weekday early mornings and moderate shortfalls during evening peaks. Weekends show better coverage but still below 85% target in many periods.
+
+![Weekly Coverage Heatmap](Coverage_Heatmap.png)
 
 ### Summary Dashboard
-![Dashboard](Summary_Dashboard.png)
+Four-panel analysis showing:
+- **Top-left**: Coverage ratio by hour with 85% target line
+- **Top-right**: Count of undersupplied periods by day of week
+- **Bottom-left**: Additional driver hours required by day
+- **Bottom-right**: Driver earnings analysis comparing current baseline vs. captured demand vs. recommended guarantee
+
+![Summary Dashboard](Summary_Dashboard.png)
 
 ## 🛠️ Technologies Used
 
